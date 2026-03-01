@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Купить билеты в авиа, кино, театр. Билетум - Главная страница.</title>
+    <link rel="stylesheet" href="/mainpage.css">
+</head>
+<body>
+
+    <!-- Шапка -->
+    <script src="/checkToken.js" defer></script>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="/">Билетум</a>
+            </div>
+            <nav class="nav">
+                <a href="/" class="nav-link">Главная</a>
+                <a href="/avia" class="nav-link">Авиа</a>
+                <a href="/theatre" class="nav-link">Театр</a>
+                <a href="/cinema" class="nav-link">Кино</a>
+            </nav>
+            <div class="header-actions">
+                <a href="/authorization" class="btn btn-outline">Войти</a>
+                <a href="/registration" class="btn btn-primary">Регистрация</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Основной контент -->
+
+    <main>
+
+        <!-- Слоган -->
+
+        <section class="hero">
+            <div class="container">
+                <h1 class="hero-title">Путешествуй, вдохновляйся, открывай</h1>
+                <p class="hero-subtitle">Билеты на авиарейсы, театральные премьеры и киноновинки — быстро и удобно</p>
+            </div>
+        </section>
+
+        <!-- Категории -->
+
+        <section class="categories">
+            <div class="container">
+                <h2 class="section-title">Что вас интересует?</h2>
+                <div class="categories-grid">
+                    <a href="/avia" class="category-card">
+                        <div class="category-icon">
+                            <img src="/mainplane.png" alt="Авиа">
+                        </div>
+                        <h3 class="category-title">Авиаперелёты</h3>
+                        <p class="category-desc">Более 500 направлений по всему миру</p>
+                    </a>
+                    <a href="/theatre" class="category-card">
+                        <div class="category-icon">
+                            <img src="/maintheatre.png" alt="Театр">
+                        </div>
+                        <h3 class="category-title">Театральные постановки</h3>
+                        <p class="category-desc">Лучшие спектакли и мюзиклы</p>
+                    </a>
+                    <a href="/cinema" class="category-card">
+                        <div class="category-icon">
+                            <img src="/maincinema.png" alt="Кино">
+                        </div>
+                        <h3 class="category-title">Киносеансы</h3>
+                        <p class="category-desc">Все новинки кинопроката</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Футер -->
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-row">
+                <div class="footer-col">
+                    <div class="footer-logo">Билетум</div>
+                    <p class="footer-about">Онлайн-сервис для бронирования и покупки билетов на авиарейсы, театральные представления и киносеансы.</p>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-title">Категории</h4>
+                    <div class="footer-links">
+                        <a href="../userCategoryPlane/userPlane.html">Авиа</a>
+                        <a href="../userCategoryTheatre/userTheatre.html">Театр</a>
+                        <a href="../userCategoryCinema/userCinema.html">Кино</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-title">Помощь</h4>
+                    <div class="footer-links">
+                        <a href="/faq">Часто задаваемые вопросы</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-title">Контакты</h4>
+                    <div class="footer-contacts">
+                        <div>+7(495)123-45-67</div>
+                        <div>support@biletum.ru</div>
+                        <div>Москва, ул. Тверская, д. 1</div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="footer-copy">&copy; 2026 Билетум. Все права защищены.</p>
+                <p class="footer-version">Версия 1.0.0</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

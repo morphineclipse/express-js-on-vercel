@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Купить билеты в авиа, кино, театр. Билетум - Личный кабинет.</title>
+    <link rel="stylesheet" href="/userPersonalAccount.css">
+</head>
+<body>
+
+    <!-- Шапка -->
+    <script src="/userProfile.js" defer></script>
+    <script src="/checkToken.js" defer></script>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="/">Билетум</a>
+            </div>
+            <nav class="nav">
+                <a href="/" class="nav-link">Главная</a>
+                <a href="/avia" class="nav-link">Авиа</a>
+                <a href="/theatre" class="nav-link">Театр</a>
+                <a href="/cinema" class="nav-link">Кино</a>
+            </nav>
+            <div class="header-actions">
+                <a href="/authorization" class="btn btn-outline">Войти</a>
+                <a href="/registration" class="btn btn-primary">Регистрация</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="profile">
+        <div class="container">
+            <h1 class="profile-title">Личный кабинет</h1>
+            
+            <div class="profile-grid">
+
+                <!-- Левая колонка: личные данные -->
+
+                <div class="profile-card profile-info">
+                    <h2 class="profile-card-title">Личные данные</h2>
+                    
+                    <form id="form" class="profile-form">
+                        <div class="form-group">
+                            <label for="firstname">Имя</label>
+                            <input type="text" id="firstname" name="firstname" placeholder="Введите имя" value="Иван">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="lastname">Фамилия</label>
+                            <input type="text" id="lastname" name="lastname" placeholder="Введите фамилию" value="Иванов">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Номер телефона</label>
+                            <input type="tel" id="phone" name="phone" placeholder="+7 (999) 123-45-67" value="+7 (999) 123-45-67">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Электронная почта</label>
+                            <input type="email" id="email" name="email" placeholder="example@mail.ru" value="ivan@mail.ru" readonly>
+                            <small class="form-hint">Email нельзя изменить</small>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary profile-save-btn">Сохранить данные</button>
+                    </form>
+                </div>
+
+                <!-- Правая колонка: купленные билеты -->
+
+                <div class="profile-card profile-tickets">
+                    <h2 class="profile-card-title">Купленные билеты</h2>
+                    
+                    <div class="tickets-list">
+                        <!-- Пример билета 1 -->
+                        <div class="ticket-item">
+                            <div class="ticket-icon">✈️</div>
+                            <div class="ticket-info">
+                                <div class="ticket-title">Москва — Сочи</div>
+                                <div class="ticket-details">25 марта 2025, 10:30 • Рейс SU 1234</div>
+                                <div class="ticket-details">Место: 12A • Билет: 12345-67890</div>
+                            </div>
+                            <div class="ticket-price">4 500 ₽</div>
+                        </div>
+
+                        <!-- Пример билета 2 -->
+                        <div class="ticket-item">
+                            <div class="ticket-icon">🎭</div>
+                            <div class="ticket-info">
+                                <div class="ticket-title">Гамлет</div>
+                                <div class="ticket-details">27 марта 2025, 19:00 • Театр им. Вахтангова</div>
+                                <div class="ticket-details">Ряд: 5, Место: 12 • Билет: 54321-09876</div>
+                            </div>
+                            <div class="ticket-price">2 500 ₽</div>
+                        </div>
+
+                        <!-- Пример билета 3 -->
+                        <div class="ticket-item">
+                            <div class="ticket-icon">🎬</div>
+                            <div class="ticket-info">
+                                <div class="ticket-title">Аватар: Путь воды</div>
+                                <div class="ticket-details">Сегодня, 20:00 • Кинотеатр Каро 11</div>
+                                <div class="ticket-details">Зал: 3, Ряд: 7, Место: 15 • Билет: 09876-54321</div>
+                            </div>
+                            <div class="ticket-price">450 ₽</div>
+                        </div>
+
+                        <!-- Сообщение, если билетов нет (будет скрыто, если есть билеты) -->
+                        <!-- <div class="tickets-empty">У вас пока нет купленных билетов</div> -->
+                    </div>
+                    
+                    <!-- Кнопка для логики (пока заглушка) -->
+                    <button class="btn btn-outline tickets-history-btn">История покупок</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+     <!-- Футер -->
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-row">
+                <div class="footer-col">
+                    <div class="footer-logo">Билетум</div>
+                    <p class="footer-about">Онлайн-сервис для бронирования и покупки билетов на авиарейсы, театральные представления и киносеансы.</p>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-title">Категории</h4>
+                    <div class="footer-links">
+                        <a href="../userCategoryPlane/userPlane.html">Авиа</a>
+                        <a href="../userCategoryTheatre/userTheatre.html">Театр</a>
+                        <a href="../userCategoryCinema/userCinema.html">Кино</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-title">Помощь</h4>
+                    <div class="footer-links">
+                        <a href="/faq">Часто задаваемые вопросы</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-title">Контакты</h4>
+                    <div class="footer-contacts">
+                        <div>+7(495)123-45-67</div>
+                        <div>support@biletum.ru</div>
+                        <div>Москва, ул. Тверская, д. 1</div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="footer-copy">&copy; 2026 Билетум. Все права защищены.</p>
+                <p class="footer-version">Версия 1.0.0</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
