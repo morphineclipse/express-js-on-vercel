@@ -76,7 +76,7 @@ app.post("/login", async (req, res) => {
 });
 
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, '..', 'components', 'mainPage', 'mainPage.html'))
+  res.sendFile(path.join(__dirname, '..', 'components', 'mainpage', 'mainPage.html'))
 })
 
 app.get('/registration', (req, res) => {
@@ -114,3 +114,4 @@ app.get('/healthz', (req, res) => {
 })
 
 export default app
+
