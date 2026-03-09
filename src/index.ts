@@ -167,7 +167,7 @@ app.get('/', (req, res) => {
 })
 
 app.get('/main', (req, res) => {
-  res.sendFile(path.join(process.cwd(), 'components', 'mainpage', 'mainPage.html'))
+  res.sendFile(path.join(process.cwd(), 'components', 'mainpage', 'mainpage.html'))
 })
 
 app.get('/registration', (req, res) => {
