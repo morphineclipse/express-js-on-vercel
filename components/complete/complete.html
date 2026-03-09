@@ -3,14 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Купить билеты в авиа, кино, театр. Билетум - Авторизация.</title>
-    <link rel="stylesheet" href="/css/regUser.css">
+    <title>Купить билеты в авиа, кино, театр. Билетум - Оплата.</title>
+    <link rel="stylesheet" href="/css/complete.css">
     <link rel="shortcut icon" href="/icon.png" type="image/x-icon">
 </head>
 <body>
-
-    <!-- Шапка -->
-    <script src="/js/userAutho.js" defer></script>
     <script src="/js/checkToken.js" defer></script>
     <header class="header">
         <div class="container">
@@ -30,40 +27,22 @@
         </div>
     </header>
 
-    <!-- Форма входа -->
-    <main class="register">
+    <main class="payment-processing-page">
         <div class="container">
-            <div class="register-card">
-                <h1 class="register-title">Вход в аккаунт</h1>
-                <p class="register-subtitle">Введите свои данные для входа в сервис</p>
-
-                <form class="register-form" id="reg-form">
-                    <div class="form-group">
-                        <label for="email">Электронная почта</label>
-                        <input type="email" id="email" name="email" placeholder="example@mail.ru" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="password">Пароль</label>
-                        <input type="password" id="password" name="password" placeholder="Ваш пароль" required>
-                    </div>
-
-                    <button type="submit" class="btn btn-primary register-btn">Войти</button>
-                </form>
-
-                <div class="login-link">
-                    Ещё нет аккаунта? <a href="/registration">Зарегистрироваться</a>
+            <div class="payment-card">
+                <div class="animation-container">
+                    <div class="loader-circle" id="loader"></div>
+                    <svg class="checkmark hidden" id="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+                        <circle class="checkmark-circle" cx="26" cy="26" r="25" fill="none"/>
+                        <path class="checkmark-check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
+                    </svg>
                 </div>
-
-                <!-- Вход для администратора -->
-                <div class="admin-link">
-                    <a href="../authorization/adminAutho.html">Войти как администратор</a>
-                </div>
+                
+                <a href="../personalAccount/userAccount.html" class="btn btn-primary" id="continue-btn" style="display: none;">Перейти к билетам</a>
             </div>
         </div>
     </main>
 
-    <!-- Футер -->
     <footer class="footer">
         <div class="container">
             <div class="footer-row">
@@ -100,5 +79,15 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        setTimeout(function() {
+            document.getElementById('loader').classList.add('hidden');
+            document.getElementById('checkmark').classList.remove('hidden');
+            document.getElementById('status-title').textContent = 'Оплата прошла успешно';
+            document.getElementById('status-message').textContent = 'Ваш билет отправлен на указанную почту';
+            document.getElementById('continue-btn').style.display = 'inline-block';
+        }, 3000);
+    </script>
 </body>
 </html>

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Купить билеты в авиа, кино, театр. Билетум - Авиабилеты.</title>
+    <link rel="stylesheet" href="/css/userPlane.css">
+    <link rel="shortcut icon" href="/icon.png" type="image/x-icon">
+</head>
+<body>
+    <!-- Шапка -->
+    <script src="/js/checkToken.js" defer></script>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="/">Билетум</a>
+            </div>
+            <nav class="nav">
+                <a href="/" class="nav-link">Главная</a>
+                <a href="/avia" class="nav-link">Авиа</a>
+                <a href="/theatre" class="nav-link">Театр</a>
+                <a href="/cinema" class="nav-link">Кино</a>
+            </nav>
+            <div class="header-actions">
+                <a href="/authorization" class="btn btn-outline">Войти</a>
+                <a href="/registration" class="btn btn-primary">Регистрация</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Основной контент -->
+    <main class="category-page">
+        <div class="container">
+            <h1 class="category-title">Авиаперелёты</h1>
+            
+            <!-- Поиск и фильтрация -->
+            <div class="search-section">
+                <form class="category-search">
+                    <div class="search-row">
+                        <div class="search-field">
+                            <label for="from">Откуда</label>
+                            <input type="text" id="from" name="from" placeholder="Город вылета">
+                        </div>
+                        <div class="search-field">
+                            <label for="to">Куда</label>
+                            <input type="text" id="to" name="to" placeholder="Город назначения">
+                        </div>
+                        <div class="search-field">
+                            <label for="date">Дата</label>
+                            <input type="date" id="date" name="date" value="2026-04-15">
+                        </div>
+                        <div class="search-field">
+                            <label for="return-date">Обратно</label>
+                            <input type="date" id="return-date" name="return-date" value="2026-04-22">
+                        </div>
+                        <button type="submit" class="btn btn-primary search-btn">Найти билеты</button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Результаты поиска / Список рейсов -->
+            <div class="results-section">
+                <h2 class="results-title">Доступные рейсы</h2>
+                
+                <div class="flights-grid">
+                    <!-- Карточка рейса 1 -->
+                    <div class="flight-card">
+                        <div class="flight-content">
+                            <h3 class="flight-route">Москва — Сочи</h3>
+                            <div class="flight-time">10:30 — 13:45 • 3ч 15м</div>
+                            <div class="flight-date">15.04.2026</div>
+                            <div class="flight-price">от 4 990 ₽</div>
+                            <a href="/ticket" class="btn btn-primary flight-btn">Выбрать билет</a>
+                        </div>
+                    </div>
+
+                    <!-- Карточка рейса 2 -->
+                    <div class="flight-card">
+                        <div class="flight-content">
+                            <h3 class="flight-route">Москва — Сочи</h3>
+                            <div class="flight-time">12:15 — 15:30 • 3ч 15м</div>
+                            <div class="flight-date">15.04.2026</div>
+                            <div class="flight-price">от 5 450 ₽</div>
+                            <a href="/ticket" class="btn btn-primary flight-btn">Выбрать билет</a>
+                        </div>
+                    </div>
+
+                    <!-- Карточка рейса 3 -->
+                    <div class="flight-card">
+                        <div class="flight-content">
+                            <h3 class="flight-route">Москва — Сочи</h3>
+                            <div class="flight-time">14:45 — 18:00 • 3ч 15м</div>
+                            <div class="flight-date">15.04.2026</div>
+                            <div class="flight-price">от 4 790 ₽</div>
+                            <a href="/ticket" class="btn btn-primary flight-btn">Выбрать билет</a>
+                        </div>
+                    </div>
+
+                    <!-- Карточка рейса 4 -->
+                    <div class="flight-card">
+                        <div class="flight-content">
+                            <h3 class="flight-route">Москва — Сочи</h3>
+                            <div class="flight-time">16:20 — 19:35 • 3ч 15м</div>
+                            <div class="flight-date">15.04.2026</div>
+                            <div class="flight-price">от 3 990 ₽</div>
+                            <a href="/ticket" class="btn btn-primary flight-btn">Выбрать билет</a>
+                        </div>
+                    </div>
+
+                    <!-- Карточка рейса 5 -->
+                    <div class="flight-card">
+                        <div class="flight-content">
+                            <h3 class="flight-route">Москва — Ереван</h3>
+                            <div class="flight-time">09:00 — 13:30 • 2ч 30м</div>
+                            <div class="flight-date">15.04.2026</div>
+                            <div class="flight-price">от 7 890 ₽</div>
+                            <a href="/ticket" class="btn btn-primary flight-btn">Выбрать билет</a>
+                        </div>
+                    </div>
+
+                    <!-- Карточка рейса 6 -->
+                    <div class="flight-card">
+                        <div class="flight-content">
+                            <h3 class="flight-route">Москва — Ереван</h3>
+                            <div class="flight-time">11:30 — 16:00 • 2ч 30м</div>
+                            <div class="flight-date">15.04.2026</div>
+                            <div class="flight-price">от 8 450 ₽</div>
+                            <a href="/ticket" class="btn btn-primary flight-btn">Выбрать билет</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Футер -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-row">
+                <div class="footer-col">
+                    <div class="footer-logo">Билетум</div>
+                    <p class="footer-about">Онлайн-сервис для бронирования и покупки билетов на авиарейсы, театральные представления и киносеансы.</p>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-title">Категории</h4>
+                    <div class="footer-links">
+                        <a href="/avia">Авиа</a>
+                        <a href="/theatre">Театр</a>
+                        <a href="/cinema">Кино</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-title">Помощь</h4>
+                    <div class="footer-links">
+                        <a href="/faq">Часто задаваемые вопросы</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-title">Контакты</h4>
+                    <div class="footer-contacts">
+                        <div>+7(495)123-45-67</div>
+                        <div>support@biletum.ru</div>
+                        <div>Москва, ул. Тверская, д. 1</div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="footer-copy">&copy; 2026 Билетум. Все права защищены.</p>
+                <p class="footer-version">Версия 1.0.0</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

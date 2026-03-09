@@ -30,5 +30,13 @@
     "name": "1",
     "surname": "allen",
     "phoneNumber": "+712345689"
+  },
+  {
+    "id": 5,
+    "email": "rg@gmail.com",
+    "password": "123456789",
+    "name": "я",
+    "surname": "мы",
+    "phoneNumber": "+79673123313"
   }
 ]

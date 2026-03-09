@@ -193,4 +193,12 @@ app.get('/cinema', (req, res) => {
   res.sendFile(path.join(__dirname, '..', 'components', 'userCategoryCinema', 'userCinema.html'))
 })
 
+app.get('/ticket', (req, res) => {
+  res.sendFile(path.join(__dirname, '..', 'components', 'ticket', 'ticket.html'))
+})
+
+app.get('/complete', (req, res) => {
+  res.sendFile(path.join(__dirname, '..', 'components', 'complete', 'complete.html'))
+})
+
 export default app
