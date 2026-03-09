@@ -163,6 +163,10 @@ app.post("/api-write-user-data", async (req, res) => {
 })
 
 app.get('/', (req, res) => {
+  res.redirect("/main")
+})
+
+app.get('/main', (req, res) => {
   res.sendFile(path.join(process.cwd(), 'components', 'mainpage', 'mainPage.html'))
 })
 
