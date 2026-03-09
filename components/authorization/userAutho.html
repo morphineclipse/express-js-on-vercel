@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Купить билеты в авиа, кино, театр. Билетум - Авторизация.</title>
+    <link rel="stylesheet" href="/css/regUser.css">
+</head>
+<body>
+
+    <!-- Шапка -->
+
+    <script src="/js/userAutho.js" defer></script>
+    <script src="/js/checkToken.js" defer></script>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="/">Билетум</a>
+            </div>
+            <nav class="nav">
+                <a href="/" class="nav-link">Главная</a>
+                <a href="/avia" class="nav-link">Авиа</a>
+                <a href="/theatre" class="nav-link">Театр</a>
+                <a href="/cinema" class="nav-link">Кино</a>
+            </nav>
+            <div class="header-actions">
+                <a href="/authorization" class="btn btn-outline">Войти</a>
+                <a href="/registration" class="btn btn-primary">Регистрация</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Форма входа -->
+
+    <main class="register">
+        <div class="container">
+            <div class="register-card">
+                <h1 class="register-title">Вход в аккаунт</h1>
+                <p class="register-subtitle">Введите свои данные для входа в сервис</p>
+
+                <form class="register-form" id="reg-form">
+                    <div class="form-group">
+                        <label for="email">Электронная почта</label>
+                        <input type="email" id="email" name="email" placeholder="example@mail.ru" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password">Пароль</label>
+                        <input type="password" id="password" name="password" placeholder="Ваш пароль" required>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary register-btn">Войти</button>
+                </form>
+
+                <div class="login-link">
+                    Ещё нет аккаунта? <a href="/registration">Зарегистрироваться</a>
+                </div>
+
+                <!-- Вход для администратора -->
+
+                <div class="admin-link">
+                    <a href="../authorization/adminAutho.html">Войти как администратор</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Футер -->
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-row">
+                <div class="footer-col">
+                    <div class="footer-logo">Билетум</div>
+                    <p class="footer-about">Онлайн-сервис для бронирования и покупки билетов на авиарейсы, театральные представления и киносеансы.</p>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-title">Категории</h4>
+                    <div class="footer-links">
+                        <a href="../userCategoryPlane/userPlane.html">Авиа</a>
+                        <a href="../userCategoryTheatre/userTheatre.html">Театр</a>
+                        <a href="../userCategoryCinema/userCinema.html">Кино</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-title">Помощь</h4>
+                    <div class="footer-links">
+                        <a href="/faq">Часто задаваемые вопросы</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-title">Контакты</h4>
+                    <div class="footer-contacts">
+                        <div>+7(495)123-45-67</div>
+                        <div>support@biletum.ru</div>
+                        <div>Москва, ул. Тверская, д. 1</div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="footer-copy">&copy; 2026 Билетум. Все права защищены.</p>
+                <p class="footer-version">Версия 1.0.0</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
