@@ -11,6 +11,7 @@ const app = express()
 
 app.use(express.json()); 
 
+app.use(express.static(path.join(process.cwd(), "components")))
 app.use('/css', express.static(path.join(__dirname, '..', 'public', 'css')));
 app.use('/js', express.static(path.join(__dirname, '..', 'public', 'js')));
 app.use('/', express.static(path.join(__dirname, '..', 'public')));
@@ -162,43 +163,43 @@ app.post("/api-write-user-data", async (req, res) => {
 })
 
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, '..', 'components', 'mainpage', 'mainPage.html'))
+  res.sendFile(path.join(process.cwd(), 'components', 'mainpage', 'mainPage.html'))
 })
 
 app.get('/registration', (req, res) => {
-  res.sendFile(path.join(__dirname, '..', 'components', 'registration', 'regUser.html'))
+  res.sendFile(path.join(process.cwd(), 'components', 'registration', 'regUser.html'))
 })
 
 app.get('/authorization', (req, res) => {
-  res.sendFile(path.join(__dirname, '..', 'components', 'authorization', 'userAutho.html'))
+  res.sendFile(path.join(process.cwd(), 'components', 'authorization', 'userAutho.html'))
 })
 
 app.get('/profile', (req, res) => {
-  res.sendFile(path.join(__dirname, '..', 'components', 'userPersonalAccount', 'userPersonalAccount.html'))
+  res.sendFile(path.join(process.cwd(), 'components', 'userPersonalAccount', 'userPersonalAccount.html'))
 })
 
 app.get('/faq', (req, res) => {
-  res.sendFile(path.join(__dirname, '..', 'components', 'faq', 'faq.html'))
+  res.sendFile(path.join(process.cwd(), 'components', 'faq', 'faq.html'))
 })
 
 app.get('/avia', (req, res) => {
-  res.sendFile(path.join(__dirname, '..', 'components', 'userCategoryPlane', 'userPlane.html'))
+  res.sendFile(path.join(process.cwd(), 'components', 'userCategoryPlane', 'userPlane.html'))
 })
 
 app.get('/theatre', (req, res) => {
-  res.sendFile(path.join(__dirname, '..', 'components', 'userCategoryTheatre', 'userTheatre.html'))
+  res.sendFile(path.join(process.cwd(), 'components', 'userCategoryTheatre', 'userTheatre.html'))
 })
 
 app.get('/cinema', (req, res) => {
-  res.sendFile(path.join(__dirname, '..', 'components', 'userCategoryCinema', 'userCinema.html'))
+  res.sendFile(path.join(process.cwd(), 'components', 'userCategoryCinema', 'userCinema.html'))
 })
 
 app.get('/ticket', (req, res) => {
-  res.sendFile(path.join(__dirname, '..', 'components', 'ticket', 'ticket.html'))
+  res.sendFile(path.join(process.cwd(), 'components', 'ticket', 'ticket.html'))
 })
 
 app.get('/complete', (req, res) => {
-  res.sendFile(path.join(__dirname, '..', 'components', 'complete', 'complete.html'))
+  res.sendFile(path.join(process.cwd(), 'components', 'complete', 'complete.html'))
 })
 
 export default app
