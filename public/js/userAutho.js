@@ -28,7 +28,6 @@ form.addEventListener("submit", async (e) => {
             alert(data.error || "Ошибка входа");
         }
         
-        console.log(1);
     } catch (error) {
         console.error("Ошибка:", error);
         alert("Ошибка сервера");

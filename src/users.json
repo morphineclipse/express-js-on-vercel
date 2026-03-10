@@ -1,21 +1,5 @@
 [
   {
-    "id": 1,
-    "email": "123@123",
-    "password": "123",
-    "name": "Иван",
-    "surname": "Lox123",
-    "phoneNumber": "+70987654321"
-  },
-  {
-    "id": 2,
-    "email": "test@user",
-    "password": "zxc!@#",
-    "name": "john",
-    "surname": "",
-    "phoneNumber": ""
-  },
-  {
     "id": 3,
     "email": "john@mail",
     "password": "4321",
@@ -30,13 +14,5 @@
     "name": "1",
     "surname": "allen",
     "phoneNumber": "+712345689"
-  },
-  {
-    "id": 5,
-    "email": "rg@gmail.com",
-    "password": "123456789",
-    "name": "я",
-    "surname": "мы",
-    "phoneNumber": "+79673123313"
   }
 ]

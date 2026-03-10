@@ -6,4 +6,7 @@ body {
   nav a {
     margin-right: 1rem;
   }
+  h1{
+    margin: 0;
+  }
   

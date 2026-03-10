@@ -121,9 +121,6 @@
         box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.5);
     }
 
-    .animation-container {
-        margin-bottom: 30px;
-    }
 
     .loader-circle {
         width: 80px;

@@ -29,16 +29,17 @@
 
     <main class="payment-processing-page">
         <div class="container">
-            <div class="payment-card">
-                <div class="animation-container">
+            <div id="payment" class="payment-card">
+                <div id="container" class="animation-container">
                     <div class="loader-circle" id="loader"></div>
                     <svg class="checkmark hidden" id="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
                         <circle class="checkmark-circle" cx="26" cy="26" r="25" fill="none"/>
                         <path class="checkmark-check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
                     </svg>
                 </div>
-                
-                <a href="../personalAccount/userAccount.html" class="btn btn-primary" id="continue-btn" style="display: none;">Перейти к билетам</a>
+                <h1 id="status-title"></h1>
+                <p id="status-message"></p>
+                <a href="/profile" class="btn btn-primary" id="continue-btn" style="display: none;">Перейти к билетам</a>
             </div>
         </div>
     </main>
@@ -84,9 +85,14 @@
         setTimeout(function() {
             document.getElementById('loader').classList.add('hidden');
             document.getElementById('checkmark').classList.remove('hidden');
+            document.getElementById('container').style.display = 'none';
+            const payment = document.getElementById('payment')
+            payment.style.display = 'flex';
+            payment.style.flexDirection = 'column';
+            payment.style.gap = '20px';
             document.getElementById('status-title').textContent = 'Оплата прошла успешно';
             document.getElementById('status-message').textContent = 'Ваш билет отправлен на указанную почту';
-            document.getElementById('continue-btn').style.display = 'inline-block';
+            document.getElementById('continue-btn').style.display = 'block';
         }, 3000);
     </script>
 </body>

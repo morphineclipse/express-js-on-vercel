@@ -188,13 +188,6 @@ a {
     padding: 0 20px;
 }
 
-.flight-duration {
-    text-align: center;
-    font-size: 15px;
-    color: #b0b3b8;
-    margin-bottom: 16px;
-}
-
 .flight-info-row {
     display: flex;
     justify-content: space-between;

@@ -8,7 +8,7 @@
     <link rel="shortcut icon" href="/icon.png" type="image/x-icon">
 </head>
 <body>
-    <!-- Шапка -->
+
     <script src="/js/checkToken.js" defer></script>
     <header class="header">
         <div class="container">
@@ -28,7 +28,6 @@
         </div>
     </header>
 
-    <!-- Основной контент -->
     <main class="booking-page">
         <div class="container">
 
@@ -36,7 +35,7 @@
             
             <div class="booking-grid">
                 <div class="booking-card flight-info-card">
-                    <h2 class="booking-card-title">Информация о рейсе</h2>
+                    <h2 class="booking-card-title">${ticket.from}</h2>
                     
                     <div class="flight-details">
                         <div class="route-points">
@@ -53,8 +52,6 @@
                             </div>
                         </div>
                         
-                        <div class="flight-duration">Длительность: 3 часа 15 минут</div>
-                        
                         <div class="flight-info-row">
                             <span class="info-label">Авиакомпания:</span>
                             <span class="info-value">Аэрофлот</span>
@@ -62,7 +59,7 @@
                         
                         <div class="flight-info-row">
                             <span class="info-label">Номер рейса:</span>
-                            <span class="info-value">SU 1234</span>
+                            <span class="info-value">SU1234</span>
                         </div>
                         
                         <div class="flight-price-block">
@@ -152,7 +149,6 @@
         </div>
     </main>
 
-    <!-- Футер -->
     <footer class="footer">
         <div class="container">
             <div class="footer-row">
