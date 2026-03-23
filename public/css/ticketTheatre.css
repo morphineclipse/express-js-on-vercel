@@ -104,44 +104,116 @@ a {
     gap: 12px;
 }
 
-.profile {
-    padding: 60px 0;
+/* Booking Page Styles */
+.booking-page {
+    padding: 40px 0 60px;
     min-height: calc(100vh - 300px);
 }
 
-.profile-title {
+.booking-title {
     font-size: 32px;
     font-weight: 700;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
     color: #fff;
 }
 
-.profile-grid {
-    display: grid;
-    grid-template-columns: 1fr 1.5fr;
-    gap: 30px;
+.booking-grid {
+    display: flex;
+    gap: 24px;
 }
 
-.profile-card {
+.booking-card {
     background-color: #24262b;
     border-radius: 20px;
     padding: 30px;
     border: 1px solid #2f3136;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 0px;
 }
 
-.profile-card-title {
+.booking-card-title {
     font-size: 20px;
     font-weight: 600;
     margin-bottom: 24px;
     color: #fff;
     padding-bottom: 12px;
     border-bottom: 1px solid #2f3136;
+    flex-shrink: 0;
 }
 
-.profile-form {
+.event-details {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 16px;
+    flex: 1;
+}
+
+.event-points {
+    display: flex;
+    background-color: #2f3136;
+    padding: 20px;
+    border-radius: 16px;
+    margin-bottom: 8px;
+}
+
+.event-info {
+    text-align: left;
+    flex: 1 1 0px;
+}
+
+.event-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 8px;
+}
+
+.event-location {
+    font-size: 15px;
+    color: #b0b3b8;
+    margin-bottom: 12px;
+    line-height: 1.5;
+}
+
+.event-time, .event-date {
+    font-size: 15px;
+    color: #b0b3b8;
+    margin-bottom: 4px;
+}
+
+.event-price-block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 0;
+    margin-top: 8px;
+    font-size: 18px;
+    border-top: 1px solid #2f3136;
+}
+
+.price-label {
+    color: #b0b3b8;
+}
+
+.price-value {
+    color: #8b5cf6;
+    font-weight: 700;
+    font-size: 24px;
+}
+
+.visitor-card .visitor-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    flex: 1 1 0px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
 }
 
 .form-group {
@@ -165,6 +237,7 @@ a {
     font-size: 15px;
     transition: border-color 0.2s;
     outline: none;
+    width: 100%;
 }
 
 .form-group input:focus {
@@ -172,10 +245,8 @@ a {
     box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.2);
 }
 
-.form-group input[readonly] {
-    background-color: #1e1f22;
-    color: #7b7f85;
-    cursor: not-allowed;
+.form-group input::placeholder {
+    color: #5d6269;
 }
 
 .form-hint {
@@ -184,95 +255,152 @@ a {
     margin-top: 4px;
 }
 
-.profile-save-btn {
+.visitor-payment-details {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 5px;
+    padding-top: 16px;
+    border-top: 1px solid #2f3136;
+}
+
+.visitor-payment-section {
+    margin-top: 5px;
+    padding-top: 10px;
+    border-top: 1px solid #2f3136;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.final-price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px;
+}
+
+.final-price-label {
+    color: #b0b3b8;
+}
+
+.final-price-value {
+    color: #8b5cf6;
+    font-weight: 700;
+    font-size: 24px;
+}
+
+.payment-btn {
     width: 100%;
-    margin-top: 12px;
     padding: 14px;
     font-size: 16px;
 }
 
-.tickets-list {
+/* Payment Processing Page Styles */
+
+.payment-card {
     display: flex;
     flex-direction: column;
-    gap: 16px;
-    margin-bottom: 24px;
-    max-height: 500px;
-    overflow-y: auto;
-    padding-right: 8px;
-}
-
-.tickets-list::-webkit-scrollbar {
-    width: 6px;
-}
-
-.tickets-list::-webkit-scrollbar-track {
-    background: #2f3136;
-    border-radius: 10px;
-}
-
-.tickets-list::-webkit-scrollbar-thumb {
-    background: #8b5cf6;
-    border-radius: 10px;
-}
-
-.ticket-item {
-    display: flex;
-    gap: 16px;
-    padding: 16px;
-    background-color: #2f3136;
-    border-radius: 12px;
-    border: 1px solid #3b3f44;
-    transition: all 0.2s;
-}
-
-.ticket-item:hover {
-    border-color: #8b5cf6;
-    transform: translateX(4px);
-}
-
-.ticket-icon {
-    width: 48px;
-    height: 48px;
-    background-color: #1e1f22;
-    border-radius: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 24px;
-}
-
-.ticket-info {
-    flex: 1;
-}
-
-.ticket-title {
-    font-size: 16px;
-    font-weight: 600;
-    color: #fff;
-    margin-bottom: 4px;
-}
-
-.ticket-details {
-    font-size: 13px;
-    color: #b0b3b8;
-    margin-bottom: 2px;
-}
-
-.ticket-price {
-    font-size: 16px;
-    font-weight: 600;
-    color: #8b5cf6;
-    white-space: nowrap;
-    align-self: center;
-}
-
-.tickets-empty {
+    gap: 20px;
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: #24262b;
+    border-radius: 24px;
+    padding: 50px 40px;
+    border: 1px solid #2f3136;
     text-align: center;
-    padding: 40px 20px;
-    color: #7b7f85;
-    font-size: 15px;
+    box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.5);
+}
+
+
+.loader-circle {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto;
+    border: 4px solid #2f3136;
+    border-top: 4px solid #8b5cf6;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.checkmark {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto;
+    display: none;
+}
+
+.checkmark-circle {
+    stroke: #10b981;
+    stroke-width: 4;
+    stroke-linecap: round;
+    stroke-dasharray: 166;
+    stroke-dashoffset: 166;
+    fill: none;
+    animation: stroke 0.6s ease forwards;
+}
+
+.checkmark-check {
+    stroke: #10b981;
+    stroke-width: 4;
+    stroke-linecap: round;
+    stroke-dasharray: 48;
+    stroke-dashoffset: 48;
+    transform-origin: 50% 50%;
+    animation: stroke 0.4s ease 0.4s forwards;
+}
+
+@keyframes stroke {
+    to { stroke-dashoffset: 0; }
+}
+
+.payment-status-title {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    color: #fff;
+}
+
+.payment-status-message {
+    font-size: 16px;
+    color: #b0b3b8;
+    margin-bottom: 30px;
+}
+
+.payment-details {
     background-color: #2f3136;
-    border-radius: 12px;
+    border-radius: 16px;
+    padding: 20px;
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+.detail-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+}
+
+.detail-row:last-child {
+    margin-bottom: 0;
+}
+
+.detail-label {
+    color: #b0b3b8;
+}
+
+.detail-value {
+    color: #fff;
+    font-weight: 500;
+}
+
+.detail-value.success {
+    color: #10b981;
 }
 
 .footer {
@@ -357,6 +485,18 @@ a {
     font-size: 12px;
 }
 
+.hidden {
+    display: none;
+}
+
+.payment-processing-page {
+    padding: 80px 0;
+    min-height: calc(100vh - 300px);
+    display: flex;
+    align-items: center;
+}
+
+
 @media (max-width: 768px) {
     .header .container {
         flex-direction: column;
@@ -372,27 +512,21 @@ a {
         justify-content: center;
     }
 
-    .profile-grid {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-
-    .profile-title {
+    .booking-title {
         font-size: 28px;
         text-align: center;
     }
 
-    .profile-card {
-        padding: 20px;
+    .booking-grid {
+        grid-template-columns: 1fr;
     }
 
-    .ticket-item {
-        flex-wrap: wrap;
+    .form-row {
+        grid-template-columns: 1fr;
     }
 
-    .ticket-price {
-        width: 100%;
-        text-align: right;
+    .payment-status-card {
+        padding: 30px 20px;
     }
 
     .footer-row {

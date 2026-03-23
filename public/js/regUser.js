@@ -19,7 +19,6 @@ form.addEventListener("submit", async (e) => {
     }
 
     try {
-        const href = window.location.href + "/register"
         const response = await fetch('/register', {
             method: "POST",
             headers: {

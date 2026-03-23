@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Купить билеты в авиа, кино, театр. Билетум - Кино.</title>
+    <link rel="stylesheet" href="/css/userTheatre.css">
+    <link rel="shortcut icon" href="/icon.png" type="image/x-icon">
+</head>
+<body> 
+    <script src="/js/userCinema.js" defer></script>
+    <script src="/js/checkToken.js" defer></script>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="/">Билетум</a>
+            </div>
+            <nav class="nav">
+                <a href="/" class="nav-link">Главная</a>
+                <a href="/avia" class="nav-link">Авиа</a>
+                <a href="/theatre" class="nav-link">Театр</a>
+                <a href="/cinema" class="nav-link">Кино</a>
+            </nav>
+            <div class="header-actions">
+                <a href="/authorization" class="btn btn-outline">Войти</a>
+                <a href="/registration" class="btn btn-primary">Регистрация</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="category-page">
+        <div class="container">
+            <h1 class="category-title">Кино</h1>
+            
+            <div class="search-section">
+                    <div class="search-row">
+                        <div class="search-field">
+                            <label for="from">Поиск</label>
+                            <input type="text" id="search" name="search" placeholder="Название кино" autocomplete="off">
+                        </div>
+
+                        <div class="search-field">
+                            <label for="date">Дата</label>
+                            <input type="date" id="date" name="date" value="2026-04-15">
+                        </div>
+                        <button id="findButton" class="btn btn-primary search-btn">Найти билеты</button>
+                        <button id="resetButton" class="btn btn-primary reset-btn">Сбросить фильтры</button>
+                    </div>
+            </div>
+
+            <div id="results" class="results-section">
+                <h2 class="results-title">Доступные билеты</h2>
+                <h2 id="noAccount" class="result-title" style="display: none; color: #8b5cf6; margin-bottom: 10px;">Войдите в аккаунт чтобы покупать билеты</h2>
+                <div id="grid" class="flights-grid">
+                    <h1 id="loading">Загрузка...</h1>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-row">
+                <div class="footer-col">
+                    <div class="footer-logo">Билетум</div>
+                    <p class="footer-about">Онлайн-сервис для бронирования и покупки билетов на авиарейсы, театральные представления и киносеансы.</p>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-title">Категории</h4>
+                    <div class="footer-links">
+                        <a href="/avia">Авиа</a>
+                        <a href="/theatre">Театр</a>
+                        <a href="/cinema">Кино</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-title">Помощь</h4>
+                    <div class="footer-links">
+                        <a href="/faq">Часто задаваемые вопросы</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-title">Контакты</h4>
+                    <div class="footer-contacts">
+                        <div>+7(495)123-45-67</div>
+                        <div>support@biletum.ru</div>
+                        <div>Москва, ул. Тверская, д. 1</div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="footer-copy">&copy; 2026 Билетум. Все права защищены.</p>
+                <p class="footer-version">Версия 1.0.0</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,179 @@
+            <!DOCTYPE html>
+            <html lang="ru">
+            <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>Купить билеты в авиа, кино, театр. Билетум - Оформление билета.</title>
+                <link rel="stylesheet" href="/css/ticketTheatre.css">
+                <link rel="shortcut icon" href="/icon.png" type="image/x-icon">
+            </head>
+            <body>
+                <script src="/js/ticketCinema.js" defer></script>
+                <script src="/js/checkToken.js" defer></script>
+                <header class="header">
+                    <div class="container">
+                        <div class="logo">
+                            <a href="/">Билетум</a>
+                        </div>
+                        <nav class="nav">
+                            <a href="/" class="nav-link">Главная</a>
+                            <a href="/avia" class="nav-link">Авиа</a>
+                            <a href="/theatre" class="nav-link">Театр</a>
+                            <a href="/cinema" class="nav-link">Кино</a>
+                        </nav>
+                        <div class="header-actions">
+                            <a href="/authorization" class="btn btn-outline">Войти</a>
+                            <a href="/registration" class="btn btn-primary">Регистрация</a>
+                        </div>
+                    </div>
+                </header>
+
+                <main id="booking" class="booking-page">
+                        <div class="container">
+
+                            <h1 class="booking-title">Оформление билета</h1>
+                            
+                            <div class="booking-grid">
+                                <div class="booking-card event-info-card">
+                                    <h2 class="booking-card-title">Событие</h2>
+                                    
+                                    <div class="event-details">
+                                        <div class="event-points">
+                                            <div class="event-info">
+                                                <div class="event-title">${ticket.name}</div>
+                                                <div class="event-location">${ticket.fullAddress}</div>
+                                                <div class="event-time">${ticket.time}</div>
+                                                <div class="event-date">${ticket.date}</div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="event-price-block">
+                                            <span class="price-label">Цена билета:</span>
+                                            <span class="price-value">${ticket.price}</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="booking-card visitor-card">
+                                    <h2 class="booking-card-title">Данные посетителя</h2>
+                                    
+                                    <form id="form" class="visitor-form">
+                                        <div class="form-group">
+                                            <label for="lastname">Фамилия</label>
+                                            <input type="text" id="lastname" name="lastname" placeholder="Иванов" required>
+                                        </div>
+                                        
+                                        <div class="form-group">
+                                            <label for="firstname">Имя</label>
+                                            <input type="text" id="firstname" name="firstname" placeholder="Иван" required>
+                                        </div>
+                                        
+                                        <div class="form-group">
+                                            <label for="patronymic">Отчество</label>
+                                            <input type="text" id="patronymic" name="patronymic" placeholder="Иванович">
+                                        </div>
+                                        
+                                        <div class="form-row">
+                                        
+                                            <div class="form-group">
+                                                <label for="phone">Номер телефона</label>
+                                                <input inputmode="numeric" pattern="[0-9]*" type="tel" id="phone" name="phone" placeholder="+7 (999) 123-45-67" required>
+                                            </div>
+                                            
+                                            <div class="form-group">
+                                                <label for="email">Электронная почта</label>
+                                                <input type="email" id="email" name="email" placeholder="example@mail.ru" required>
+                                                <small class="form-hint">На эту почту придёт билет</small>
+                                            </div>
+                                        </div>
+                                        <div class="payment-details">
+                                            
+                                            <div class="form-group">
+                                                <label for="card-number">Номер карты</label>
+                                                <input inputmode="numeric" pattern="[0-9]*" type="text" id="card-number" name="card-number" placeholder="1234 5678 9012 3456" inputmode="numeric" maxlength="19">
+                                            </div>
+                                            
+                                            <div class="form-row">
+                                                <div class="form-group">
+                                                    <label for="card-expiry">Срок действия</label>
+                                                    <input inputmode="numeric" pattern="[0-9]*" type="text" id="card-expiry" name="card-expiry" placeholder="ММ/ГГ" inputmode="numeric" maxlength="5">
+                                                </div>
+                                                
+                                                <div class="form-group">
+                                                    <label for="card-cvv">CVV</label>
+                                                    <input inputmode="numeric" pattern="[0-9]*" type="text" id="card-cvv" name="card-cvv" placeholder="123" inputmode="numeric" maxlength="3">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <br>
+
+                                        <div class="payment-section">
+                                            <div class="final-price">
+                                                <span class="final-price-label">К оплате:</span>
+                                                <span class="final-price-value">${ticket.price}</span>
+                                            </div>
+
+                                            <button type="submit" id="pay" class="btn btn-primary payment-btn">Оплатить</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </main>
+                    
+                    <main style="display: none;" id="payment" class="payment-processing-page">
+                        <div class="container">
+                            <div id="payment" class="payment-card">
+                                <div id="container" class="animation-container">
+                                    <div class="loader-circle" id="loader"></div>
+                                    <svg class="checkmark hidden" id="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+                                        <circle class="checkmark-circle" cx="26" cy="26" r="25" fill="none"/>
+                                        <path class="checkmark-check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
+                                    </svg>
+                                </div>
+                                <h1 id="status-title"></h1>
+                                <p id="status-message"></p>
+                                <a href="/profile" class="btn btn-primary" id="continue-btn" style="display: none;">Перейти к билетам</a>
+                            </div>
+                        </div>
+                    </main>
+
+                <footer class="footer">
+                    <div class="container">
+                        <div class="footer-row">
+                            <div class="footer-col">
+                                <div class="footer-logo">Билетум</div>
+                                <p class="footer-about">Онлайн-сервис для бронирования и покупки билетов на авиарейсы, театральные представления и киносеансы.</p>
+                            </div>
+                            <div class="footer-col">
+                                <h4 class="footer-title">Категории</h4>
+                                <div class="footer-links">
+                                    <a href="/avia">Авиа</a>
+                                    <a href="/theatre">Театр</a>
+                                    <a href="/cinema">Кино</a>
+                                </div>
+                            </div>
+                            <div class="footer-col">
+                                <h4 class="footer-title">Помощь</h4>
+                                <div class="footer-links">
+                                    <a href="/faq">Часто задаваемые вопросы</a>
+                                </div>
+                            </div>
+                            <div class="footer-col">
+                                <h4 class="footer-title">Контакты</h4>
+                                <div class="footer-contacts">
+                                    <div>+7(495)123-45-67</div>
+                                    <div>support@biletum.ru</div>
+                                    <div>Москва, ул. Тверская, д. 1</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="footer-bottom">
+                            <p class="footer-copy">&copy; 2026 Билетум. Все права защищены.</p>
+                            <p class="footer-version">Версия 1.0.0</p>
+                        </div>
+                    </div>
+                </footer>
+            </body>
+            </html>

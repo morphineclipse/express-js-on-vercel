@@ -8,7 +8,7 @@
     <link rel="shortcut icon" href="/icon.png" type="image/x-icon">
 </head>
 <body>
-    <script src="/js/userPlane.js"></script>
+    <script src="/js/userPlane.js" defer></script>
 
     <script src="/js/checkToken.js" defer></script>
     <header class="header">
@@ -34,28 +34,31 @@
             <h1 class="category-title">Авиаперелёты</h1>
             
             <div class="search-section">
-                <form class="category-search">
+                <form id="searchForm" class="category-search">
                     <div class="search-row">
                         <div class="search-field">
                             <label for="from">Откуда</label>
-                            <input type="text" id="from" name="from" placeholder="Город вылета">
+                            <input type="text" id="from" name="from" placeholder="Город вылета" autocomplete="off">
+                            <div id="cityList"></div>
                         </div>
                         <div class="search-field">
                             <label for="to">Куда</label>
-                            <input type="text" id="to" name="to" placeholder="Город назначения">
+                            <input type="text" id="to" name="to" placeholder="Город назначения" autocomplete="off">
+                            <div id="cityList2"></div>
                         </div>
                         <div class="search-field">
                             <label for="date">Дата</label>
                             <input type="date" id="date" name="date" value="2026-04-15">
                         </div>
-                        <button type="submit" class="btn btn-primary search-btn">Найти билеты</button>
+                        <button id="findButton" type="submit" class="btn btn-primary search-btn">Найти билеты</button>
+                        <button id="resetButton" type="submit" class="btn btn-primary reset-btn">Сбросить фильтры</button>
                     </div>
                 </form>
             </div>
 
             <div id="results" class="results-section">
                 <h2 class="results-title">Доступные рейсы</h2>
-                
+                <h2 id="noAccount" class="result-title" style="display: none; color: #8b5cf6; margin-bottom: 10px;">Войдите в аккаунт чтобы покупать билеты</h2>
                 <div id="grid" class="flights-grid">
                     <h1 id="loading">Загрузка...</h1>
                 </div>

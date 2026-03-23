@@ -5,7 +5,10 @@
     "password": "4321",
     "name": "john",
     "surname": "allen",
-    "phoneNumber": "123"
+    "phoneNumber": "123",
+    "purchasedTicketsAvia": [],
+    "purchasedTicketCinema": [],
+    "purchasedTicketsTheatre": []
   },
   {
     "id": 4,
@@ -13,6 +16,23 @@
     "password": "12345678",
     "name": "1",
     "surname": "allen",
-    "phoneNumber": "+712345689"
+    "phoneNumber": "+7 (121) 212-12-12",
+    "purchasedTicketsAvia": [
+      1,
+      6,
+      4,
+      1,
+      1
+    ],
+    "purchasedTicketsCinema": [
+      1,
+      5,
+      5,
+      5
+    ],
+    "purchasedTicketsTheatre": [
+      1,
+      2
+    ]
   }
 ]
