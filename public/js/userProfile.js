@@ -8,7 +8,13 @@ let surname = document.getElementById("lastname")
 let phoneNumber = document.getElementById("phone")
 let email = document.getElementById("email")
 
+const logout = document.getElementById('logout')
 const saveBtn = document.getElementById("save-btn")
+
+logout.addEventListener("click", ()=>{
+    localStorage.removeItem("token")
+    window.location.replace('/main')
+})
 
 phoneNumber.addEventListener("input", function(e){
     maskPhone(this)
@@ -168,10 +174,17 @@ getHistory()
 
 const form = document.getElementById("form").addEventListener("submit", async(e) =>{
     e.preventDefault()
+
     let Username = document.getElementById("firstname")
     let surname = document.getElementById("lastname")
     let phoneNumber = document.getElementById("phone")
     let email = document.getElementById("email")
+    const phoneDigits = phoneNumber.value.replace(/\D/g, '');
+    if (phoneDigits.length !== 11) {
+        alert('Номер телефона должен содержать 11 цифр');
+        phoneNumber.focus();
+        return
+    }
 
     Username = Username.value
     surname = surname.value

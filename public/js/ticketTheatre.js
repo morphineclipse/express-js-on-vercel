@@ -1,3 +1,7 @@
+if(!localStorage.getItem("token")){
+    window.location.replace("/authorization")
+}  
+
 const cardNumber = document.getElementById('card-number')
 const cvv = document.getElementById('card-cvv')
 const expiry = document.getElementById('card-expiry')
@@ -115,9 +119,71 @@ function formatPhoneNumber(phoneNumber) {
     
     return phoneNumber;
 }
+function validateForm() {
+    const cardNumber = document.getElementById('card-number');
+    const cvv = document.getElementById('card-cvv');
+    const expiry = document.getElementById('card-expiry');
+    const phone = document.getElementById('phone');
+    
+    if (cardNumber) {
+        const cardDigits = cardNumber.value.replace(/\D/g, '');
+        if (cardDigits.length !== 16) {
+            alert('Номер карты должен содержать 16 цифр');
+            cardNumber.focus();
+            return false;
+        }
+    }
+    
+    if (cvv) {
+        const cvvDigits = cvv.value.replace(/\D/g, '');
+        if (cvvDigits.length !== 3) {
+            alert('CVV должен содержать 3 цифры');
+            cvv.focus();
+            return false;
+        }
+    }
+    
+    if (expiry) {
+        const expiryValue = expiry.value;
+        if (expiryValue.length !== 5 || !expiryValue.includes('/')) {
+            alert('Срок действия должен быть в формате ММ/ГГ');
+            expiry.focus();
+            return false;
+        }
+        
+        const [month, year] = expiryValue.split('/');
+        const monthNum = parseInt(month);
+        
+        if (monthNum < 1 || monthNum > 12) {
+            alert('Месяц должен быть от 01 до 12');
+            expiry.focus();
+            return false;
+        }
+    }
+    
+    if (phone) {
+        const phoneDigits = phone.value.replace(/\D/g, '');
+        if (phoneDigits.length !== 11) {
+            alert('Номер телефона должен содержать 11 цифр');
+            phone.focus();
+            return false;
+        }
+        
+        if (!phoneDigits.startsWith('7')) {
+            alert('Номер телефона должен начинаться с +7');
+            phone.focus();
+            return false;
+        }
+    }
+    
+    return true;
+}
 
 document.getElementById('form').addEventListener('submit', async (e) => {
     e.preventDefault();
+    if (!validateForm()) {
+        return
+    }
     
     const token = localStorage.getItem("token");
     const ticketId = parseInt(window.location.href.split('/').pop());

@@ -16,6 +16,24 @@ a {
     color: inherit;
 }
 
+.logout{
+    display: flex;
+    justify-content: space-between;
+
+}
+
+#logout{
+    background-color: #2f3136;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    padding: 16px;
+    border-radius: 12px;
+    margin-bottom: 40px;
+
+}
+
 .container {
     max-width: 1200px;
     margin: 0 auto;

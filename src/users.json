@@ -15,12 +15,16 @@
     "email": "1@1",
     "password": "12345678",
     "name": "1",
-    "surname": "allen",
-    "phoneNumber": "+7 (121) 212-12-12",
+    "surname": "1",
+    "phoneNumber": "+7 (121) 343-24-43",
     "purchasedTicketsAvia": [
       1,
       6,
       4,
+      1,
+      1,
+      1,
+      1,
       1,
       1
     ],
@@ -28,11 +32,14 @@
       1,
       5,
       5,
-      5
+      5,
+      1
     ],
     "purchasedTicketsTheatre": [
       1,
-      2
+      2,
+      1,
+      1
     ]
   }
 ]

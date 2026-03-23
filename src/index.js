@@ -499,18 +499,18 @@ app.get('/avia-ticket/:id', (req, res) => {
                                         
                                         <div class="form-group">
                                             <label for="card-number">Номер карты</label>
-                                            <input type="text" id="card-number" name="card-number" placeholder="1234 5678 9012 3456">
+                                            <input type="text" id="card-number" name="card-number" required placeholder="1234 5678 9012 3456">
                                         </div>
                                         
                                         <div class="form-row">
                                             <div class="form-group">
                                                 <label for="card-expiry">Срок действия</label>
-                                                <input type="text" id="card-expiry" name="card-expiry" placeholder="ММ/ГГ">
+                                                <input type="text" id="card-expiry" name="card-expiry" required placeholder="ММ/ГГ">
                                             </div>
                                             
                                             <div class="form-group">
                                                 <label for="card-cvv">CVV</label>
-                                                <input type="text" id="card-cvv" name="card-cvv" placeholder="123">
+                                                <input type="text" id="card-cvv" name="card-cvv" required placeholder="123">
                                             </div>
                                         </div>
                                     </div>
@@ -687,18 +687,18 @@ app.get('/theatre-ticket/:id', (req, res) => {
                                             
                                             <div class="form-group">
                                                 <label for="card-number">Номер карты</label>
-                                                <input type="text" id="card-number" name="card-number" placeholder="1234 5678 9012 3456">
+                                                <input type="text" id="card-number" name="card-number" required placeholder="1234 5678 9012 3456">
                                             </div>
                                             
                                             <div class="form-row">
                                                 <div class="form-group">
                                                     <label for="card-expiry">Срок действия</label>
-                                                    <input type="text" id="card-expiry" name="card-expiry" placeholder="ММ/ГГ">
+                                                    <input type="text" id="card-expiry" name="card-expiry" required placeholder="ММ/ГГ">
                                                 </div>
                                                 
                                                 <div class="form-group">
                                                     <label for="card-cvv">CVV</label>
-                                                    <input type="text" id="card-cvv" name="card-cvv" placeholder="123">
+                                                    <input type="text" id="card-cvv" name="card-cvv" required placeholder="123">
                                                 </div>
                                             </div>
                                         </div>
@@ -877,18 +877,18 @@ app.get('/cinema-ticket/:id', (req, res) => {
                                             
                                             <div class="form-group">
                                                 <label for="card-number">Номер карты</label>
-                                                <input type="text" id="card-number" name="card-number" placeholder="1234 5678 9012 3456">
+                                                <input type="text" id="card-number" name="card-number" required placeholder="1234 5678 9012 3456">
                                             </div>
                                             
                                             <div class="form-row">
                                                 <div class="form-group">
                                                     <label for="card-expiry">Срок действия</label>
-                                                    <input type="text" id="card-expiry" name="card-expiry" placeholder="ММ/ГГ">
+                                                    <input type="text" id="card-expiry" name="card-expiry" required placeholder="ММ/ГГ">
                                                 </div>
                                                 
                                                 <div class="form-group">
                                                     <label for="card-cvv">CVV</label>
-                                                    <input type="text" id="card-cvv" name="card-cvv" placeholder="123">
+                                                    <input type="text" id="card-cvv" name="card-cvv" required placeholder="123">
                                                 </div>
                                             </div>
                                         </div>
